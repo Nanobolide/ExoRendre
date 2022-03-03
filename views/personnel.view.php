@@ -28,6 +28,11 @@ endif;
             <tr>
                 <td class="align-middle"><a href="<?= URL ?>personnels/l/<?= $personnels[$i]->getId(); ?>"><?= $personnels[$i]->getNom(); ?></a></td>
                 <td class="align-middle"><?= $personnels[$i]->getPrenom(); ?></td>
+                <td class="align-middle"><?= $personnels[$i]->getSexe(); ?></td>
+                <td class="align-middle"><?= $personnels[$i]->getFonction(); ?></td>
+                <td class="align-middle"><?= $personnels[$i]->getEmail(); ?></td>
+                <td class="align-middle"><?= $personnels[$i]->getAdresse(); ?></td>
+                <td class="align-middle"><?= $personnels[$i]->getTel(); ?></td>
                 <td class="align-middle"><a href="<?= URL ?>personnels/m/<?= $personnels[$i]->getId(); ?>" class="btn btn-warning">Modifier</a></td>
                 <td class="align-middle">
                     <form method="POST" action="<?= URL ?>personnels/s/<?= $personnels[$i]->getId(); ?>" onSubmit="return confirm('Voulez-vous vraiment supprimer le livre ?');">
