@@ -1,7 +1,7 @@
 <?php 
 ob_start(); 
 ?>
-      <form action="controllers/PersonneController.controller.php" method="POST">
+      <form action="<?= URL ?>personnels/av" method="POST">
         <div class="container mt-5">
           
         
@@ -21,8 +21,8 @@ ob_start();
              <label for="">Sexe</label>
              <select class="form-control" name="sexe" id="">
                <option></option>
-               <option value="sexe">Masculin</option>
-               <option value="sexe">Feminin</option>
+               <option name="Masculin">Masculin</option>
+               <option  name="Feminin">Feminin</option>
              </select>
            </div>
           </div>
@@ -31,9 +31,9 @@ ob_start();
           <label for="">Fonction :</label>
           <select class="form-control" name="fonction" id="">
                <option></option>
-               <option value="fonction">Directeur</option>
-               <option value="fonction">Employer</option>
-               <option value="fonction">Technicien de surface</option>
+               <option value="directeur">Directeur</option>
+               <option value="employer">Employer</option>
+               <option value="technicien">Technicien de surface</option>
              </select>
           </div>
           <div>
@@ -53,7 +53,7 @@ ob_start();
             </div>
             <div class="form-group">
              <br>
-              <input type="submit" class="btn btn-success" value="Enregistrer" name="Enregistrer">
+             <button type="submit" class="btn btn-success">Valider</button>
              
               <input type="submit"
                 class="btn btn-danger" value="Supprimer">
@@ -66,6 +66,6 @@ ob_start();
       
 <?php
 $content = ob_get_clean();
-$titre = "Ajout d'un livre";
+$titre = "Ajout d'un employer";
 require "template.php";
 ?>
