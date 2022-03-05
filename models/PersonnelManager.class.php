@@ -73,7 +73,7 @@ class PersonnelManager extends Model
         $resultat = $stmt->execute();
         $stmt->closeCursor();
         if($resultat > 0){
-            $livre = $this->getPersonnelById($id);
+            $personnels = $this->getPersonnelById($id);
             unset($personnel);
         }
     }
